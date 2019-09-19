@@ -108,14 +108,6 @@
 			</plugin>	
 			
 			<plugin>
-   				<groupId>org.apache.maven.plugins</groupId>
-   				<artifactId>maven-deploy-plugin</artifactId>
-   				<version>${maven-deploy-plugin.version}</version>
-   				<configuration>
-      					<skip>true</skip>
-   				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>${jacoco.version}</version>
@@ -183,7 +175,7 @@
 						<extensions>true</extensions>
 						<configuration>
 							<!-- The Base URL of Nexus instance where we want to stage -->
-							<nexusUrl>http://168.61.212.3:8443/repository/POCRepository</nexusUrl>
+							<nexusUrl>http://168.61.212.3:8443/#browse/browse:POCRepository</nexusUrl>
 							<!-- The server "id" element from settings to use authentication from -->
 							<serverId>ocp-nexus</serverId>
 							<skipStaging>true</skipStaging>
@@ -196,7 +188,7 @@
 <distributionManagement>
    <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://168.61.212.3:8443/repository/POCRepository</url>
+      <url>http://168.61.212.3:8443/#browse/browse:POCRepository</url>
    </snapshotRepository>
 </distributionManagement>
 
